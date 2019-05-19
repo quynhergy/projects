@@ -49,6 +49,8 @@ class TodoListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.itemArray[indexPath.row].done = !self.itemArray[indexPath.row].done
+        
+        // TODO : reload row instead of table
         tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
         
