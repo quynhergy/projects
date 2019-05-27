@@ -2,12 +2,11 @@
 //  AppDelegate.swift
 //  Flash Chat
 //
-//  Created by Quynh Nguyen on 5/11/19.
+//  Created by Quynh Nguyen on 5/27/19.
 //  Copyright © 2019 Quynh Nguyen. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Initialize and Configure Firebase
-        FirebaseApp.configure()
-        
         return true
     }
 
