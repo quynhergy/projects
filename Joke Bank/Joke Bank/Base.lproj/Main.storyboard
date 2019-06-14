@@ -33,7 +33,9 @@
                             <outlet property="delegate" destination="arZ-zD-Uqe" id="7jx-w3-GCs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Joke Bank 😜" id="4u9-Hw-qiM"/>
+                    <navigationItem key="navigationItem" title="Joke Bank 😜" largeTitleDisplayMode="always" id="4u9-Hw-qiM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gFk-4s-3Fh"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="0C5-qU-3Oy" kind="show" identifier="goToJoke" id="mLh-Xa-vc8"/>
                     </connections>
@@ -42,40 +44,37 @@
             </objects>
             <point key="canvasLocation" x="-209" y="3"/>
         </scene>
-        <!--View Controller-->
+        <!--Joke View Controller-->
         <scene sceneID="NM2-zj-e9e">
             <objects>
-                <viewController id="0C5-qU-3Oy" sceneMemberID="viewController">
+                <viewController id="0C5-qU-3Oy" customClass="JokeViewController" customModule="Joke_Bank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sca-U2-HJb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-GH-QPM">
-                                <rect key="frame" x="120" y="188" width="174" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urp-vQ-qwL">
-                                <rect key="frame" x="134.5" y="306" width="145" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joke" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-GH-QPM" userLabel="Joke">
+                                <rect key="frame" x="40" y="138" width="334" height="674"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="urp-vQ-qwL" firstAttribute="centerX" secondItem="Sca-U2-HJb" secondAttribute="centerX" id="SsH-iv-jYF"/>
-                            <constraint firstItem="Ded-GH-QPM" firstAttribute="centerX" secondItem="Sca-U2-HJb" secondAttribute="centerX" id="VNZ-Vv-HSg"/>
-                            <constraint firstItem="Ded-GH-QPM" firstAttribute="top" secondItem="Sca-U2-HJb" secondAttribute="topMargin" constant="100" id="iLK-BE-z6c"/>
-                            <constraint firstItem="urp-vQ-qwL" firstAttribute="top" secondItem="Ded-GH-QPM" secondAttribute="bottom" constant="64" id="nfc-CC-oFI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ded-GH-QPM" secondAttribute="bottom" constant="50" id="FD6-eg-P7O"/>
+                            <constraint firstItem="Ded-GH-QPM" firstAttribute="top" secondItem="Sca-U2-HJb" secondAttribute="topMargin" constant="50" id="Jbp-Le-NHt"/>
+                            <constraint firstItem="Ded-GH-QPM" firstAttribute="leading" secondItem="Sca-U2-HJb" secondAttribute="leadingMargin" constant="20" id="MYW-0H-Bhi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ded-GH-QPM" secondAttribute="trailing" constant="20" id="WoG-Mk-Eat"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qa8-Uy-oRj"/>
                     </view>
+                    <connections>
+                        <outlet property="jokeLabel" destination="Ded-GH-QPM" id="v7D-Nd-atA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhg-n9-Dex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="3"/>
+            <point key="canvasLocation" x="628.98550724637687" y="2.6785714285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="80f-iX-K9H">
