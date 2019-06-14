@@ -1,5 +1,5 @@
 //
-//  JokeTableViewController.swift
+//  JokeViewController.swift
 //  Joke Bank
 //
 //  Created by Quynh Nguyen on 6/14/19.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class JokeTableViewController: UITableViewController {
-    
-    var jokesCategory = ["Chicken", "Walk in a bar", "Olive", "Racer"]
+class JokeViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,31 +21,27 @@ class JokeTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    /*
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
-    */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return jokesCategory.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: indexPath)
-        
-        cell.textLabel?.text = jokesCategory[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToJoke", sender: self)
-    }
- 
+    */
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

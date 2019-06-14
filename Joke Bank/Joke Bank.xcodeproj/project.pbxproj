@@ -12,6 +12,7 @@
 		9337C16D22B41A5100DB74F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9337C16C22B41A5100DB74F7 /* Assets.xcassets */; };
 		9337C17022B41A5100DB74F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9337C16E22B41A5100DB74F7 /* LaunchScreen.storyboard */; };
 		9337C17A22B43B7500DB74F7 /* JokeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337C17922B43B7500DB74F7 /* JokeTableViewController.swift */; };
+		9337C17C22B4436800DB74F7 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337C17B22B4436800DB74F7 /* JokeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9337C16F22B41A5100DB74F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9337C17122B41A5100DB74F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9337C17922B43B7500DB74F7 /* JokeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewController.swift; sourceTree = "<group>"; };
+		9337C17B22B4436800DB74F7 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				9337C16522B41A5000DB74F7 /* AppDelegate.swift */,
 				9337C16922B41A5000DB74F7 /* Main.storyboard */,
+				9337C17B22B4436800DB74F7 /* JokeViewController.swift */,
 				9337C17922B43B7500DB74F7 /* JokeTableViewController.swift */,
 				9337C16C22B41A5100DB74F7 /* Assets.xcassets */,
 				9337C16E22B41A5100DB74F7 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				9337C17A22B43B7500DB74F7 /* JokeTableViewController.swift in Sources */,
 				9337C16622B41A5000DB74F7 /* AppDelegate.swift in Sources */,
+				9337C17C22B4436800DB74F7 /* JokeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
