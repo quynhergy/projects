@@ -8,12 +8,26 @@
 
 import UIKit
 
-class JokeTableViewController: UITableViewController {
+class JokeTableViewController: UITableViewController{
     
-    var jokes = ["Chicken", "Doctor", "Lawyer"]
+    var jokes: [Joke] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let joke1 = Joke()
+        joke1.title = "Chicken"
+        joke1.text = "Q: Why did the chicken cross the road?\n\nA: To get to the other side"
+        
+        let joke2 = Joke()
+        joke2.title = "Doctor"
+        joke2.text = "Doctor: \"I'm sorry but you suffer from a terminal illness and have only 10 to live.\"\n\nPatient: \"What do you mean, 10? 10 what? Months? Weeks?!\"\n\nDoctor: \"Nine.\""
+        
+        let joke3 = Joke()
+        joke3.title = "Lawyer"
+        joke3.text = "I got another letter from this lawyer today. It said \"Final Notice\". Good that he will not bother me anymore."
+        
+        jokes = [joke1, joke2, joke3]
     }
 
     // MARK: - Table view data source
@@ -27,7 +41,7 @@ class JokeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: indexPath)
         let cell = UITableViewCell()
-        cell.textLabel?.text = jokes[indexPath.row]
+        cell.textLabel?.text = jokes[indexPath.row].title
 
         return cell
     }
@@ -46,12 +60,9 @@ class JokeTableViewController: UITableViewController {
         //let destinationVC = segue.destination as! JokeViewController
         if let jokeVC = segue.destination as? JokeViewController {
             
-            if let selectedJoke = sender as? String {
+            if let selectedJoke = sender as? Joke {
                 jokeVC.joke = selectedJoke
             }
-            //if let indexPath = tableView.indexPathForSelectedRow?.item {
-            //    jokeVC.title = jokes[indexPath]
-            //}
         }
     }
 }
