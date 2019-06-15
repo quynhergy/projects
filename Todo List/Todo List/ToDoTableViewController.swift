@@ -14,14 +14,8 @@ class ToDoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let item1 = ToDo()
-        item1.name = "Buy Eggs"
-        let item2 = ToDo()
-        item2.name = "Walk the dogs"
-        let item3 = ToDo()
-        item3.name = "Buy Milk"
-        item3.important = true
-        toDoList = [item1, item2, item3]
+        //tableView.reloadData()
+        print(toDoList)
     }
 
     // MARK: - Table view data source
@@ -44,7 +38,9 @@ class ToDoTableViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func addBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "goToNewItem", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? ItemViewController {
+            destinationVC.toDoListVC = self
+        }
     }
 }
