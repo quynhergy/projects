@@ -43,4 +43,8 @@ class ToDoTableViewController: UITableViewController {
 
         return cell
     }
+    
+    @IBAction func addBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToNewItem", sender: self)
+    }
 }
