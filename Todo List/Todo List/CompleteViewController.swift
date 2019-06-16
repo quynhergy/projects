@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ItemViewController: UIViewController {
+class CompleteViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
+    
+    var toDoItem = ToDo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        nameLabel.text = toDoItem.isImportant()
     }
+    
     @IBAction func completeBtnPressed(_ sender: Any) {
     }
 }

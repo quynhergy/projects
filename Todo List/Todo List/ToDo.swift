@@ -12,4 +12,12 @@ class ToDo {
     var name: String = ""
     var important: Bool = false
     var done: Bool = false
+    
+    func isImportant() -> String {
+        if important == true {
+            return "❗️ " + name
+        } else {
+            return name
+        }
+    }
 }

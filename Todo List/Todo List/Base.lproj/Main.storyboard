@@ -42,15 +42,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="G0c-pt-kWj" kind="show" identifier="goToComplete" id="Hyp-Yh-ZDF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEd-tI-di3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384" y="134"/>
         </scene>
-        <!--Item View Controller-->
+        <!--New Item View Controller-->
         <scene sceneID="tpD-8W-nuM">
             <objects>
-                <viewController id="dvd-LW-RYq" customClass="ItemViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dvd-LW-RYq" customClass="NewItemViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OT7-j5-5kf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +120,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EiX-zM-a9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378.2608695652175" y="133.92857142857142"/>
+            <point key="canvasLocation" x="1449" y="-236"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="Sgv-8k-Lru">
+            <objects>
+                <viewController id="G0c-pt-kWj" customClass="CompleteViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="weh-uG-Amp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6A-Js-nGQ">
+                                <rect key="frame" x="151.5" y="188" width="111" height="53"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-e5-Mge">
+                                <rect key="frame" x="82" y="294" width="250" height="65"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="FTg-Gp-XY7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <state key="normal" title="Complete">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeBtnPressed:" destination="G0c-pt-kWj" eventType="touchUpInside" id="vH4-kB-0Kh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ezq-e5-Mge" firstAttribute="top" secondItem="T6A-Js-nGQ" secondAttribute="bottom" constant="53" id="5dX-IY-wCj"/>
+                            <constraint firstItem="T6A-Js-nGQ" firstAttribute="top" secondItem="qcS-p7-gck" secondAttribute="top" constant="100" id="8PZ-u2-TWe"/>
+                            <constraint firstItem="Ezq-e5-Mge" firstAttribute="centerX" secondItem="weh-uG-Amp" secondAttribute="centerX" id="FwD-K6-Nnz"/>
+                            <constraint firstItem="T6A-Js-nGQ" firstAttribute="centerX" secondItem="weh-uG-Amp" secondAttribute="centerX" id="PWj-gB-h8W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qcS-p7-gck"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="T6A-Js-nGQ" id="6Hk-MQ-t4t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0R-kD-V2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437.68115942029" y="447.99107142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jca-Qi-fOa">

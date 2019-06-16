@@ -28,19 +28,25 @@ class ToDoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath)
         let currentToDo = toDoList[indexPath.row]
-        
-        if currentToDo.important == true {
-            cell.textLabel?.text = "❗️ " + currentToDo.name
-        } else {
-            cell.textLabel?.text = currentToDo.name
-        }
+        cell.textLabel?.text = currentToDo.isImportant()
 
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? ItemViewController {
-            destinationVC.toDoListVC = self
+        if let createVC = segue.destination as? NewItemViewController {
+            createVC.toDoListVC = self
         }
+        if let completeVC = segue.destination as? CompleteViewController {
+            if let selectedToDo = sender as? ToDo {
+                completeVC.toDoItem = selectedToDo
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTodo = toDoList[indexPath.row]
+        performSegue(withIdentifier: "goToComplete", sender: selectedTodo)
+        
     }
 }
