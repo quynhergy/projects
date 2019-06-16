@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewItemViewController: UIViewController {
     @IBOutlet weak var newItemTextField: UITextField!
@@ -19,14 +20,14 @@ class NewItemViewController: UIViewController {
     }
     
     @IBAction func addBtnPressed(_ sender: Any) {
-        let newItem = ToDo()
-        if let itemText = newItemTextField.text {
-            newItem.name = itemText
-            newItem.important = importantToggle.isOn
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let newToDo = ToDo(context: context)
+            if let itemText = newItemTextField.text {
+                newToDo.name = itemText
+                newToDo.important = importantToggle.isOn
+                newToDo.done = false
+            }
         }
-        
-        toDoListVC?.toDoList.append(newItem)
-        toDoListVC?.tableView.reloadData()
         navigationController?.popViewController(animated: true)
     }
 }
