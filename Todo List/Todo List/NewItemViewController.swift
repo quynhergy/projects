@@ -17,6 +17,9 @@ class NewItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        newItemTextField.becomeFirstResponder()
+
     }
     
     @IBAction func addBtnPressed(_ sender: Any) {
