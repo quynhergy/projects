@@ -24,9 +24,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THz-vU-GxO">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="135.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axB-Kl-Hvf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axB-Kl-Hvf">
                                                 <rect key="frame" x="10" y="0.0" width="354" height="135.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="45"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -49,6 +49,9 @@
                                                 <state key="normal" title="AC">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="KZR-vS-5qq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9j-1C-Uu5">
                                                 <rect key="frame" x="94" y="0.0" width="92.5" height="135.5"/>
@@ -57,6 +60,9 @@
                                                 <state key="normal" title="+/-">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="sfd-4m-eKb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-Jk-2bf">
                                                 <rect key="frame" x="187.5" y="0.0" width="93" height="135.5"/>
@@ -65,6 +71,9 @@
                                                 <state key="normal" title="%">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="ZJY-2t-NUd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAy-ge-GAO">
                                                 <rect key="frame" x="281.5" y="0.0" width="92.5" height="135.5"/>
@@ -73,6 +82,9 @@
                                                 <state key="normal" title="÷">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="JJM-mB-Cx6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -119,6 +131,9 @@
                                                 <state key="normal" title="×">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="vnS-H5-2hQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -165,6 +180,9 @@
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="yu4-bL-5cp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -211,6 +229,9 @@
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="sJL-2a-EZj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -249,6 +270,9 @@
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="calcBtnPressed:" destination="ZcC-f3-jqc" eventType="touchUpInside" id="XHN-c8-Iat"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -267,7 +291,7 @@
                         <viewLayoutGuide key="safeArea" id="g9m-u7-ylx"/>
                     </view>
                     <connections>
-                        <outlet property="answerLabel" destination="axB-Kl-Hvf" id="j5V-Xq-oKP"/>
+                        <outlet property="displayLabel" destination="axB-Kl-Hvf" id="j5V-Xq-oKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81x-NZ-fEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
