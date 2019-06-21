@@ -12,6 +12,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     
     private var isFinishedTyping: Bool = true
+    private var addDecimal: Bool = true
+    
+    private var displayValue: Double {
+        get {
+            guard let number = Double(displayLabel.text!) else {
+                fatalError("Cannot convert display label text to a double.")
+            }
+            return number
+        }
+        set {
+            return displayLabel.text = String(newValue)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +37,12 @@ class ViewController: UIViewController {
                 displayLabel.text = userInput
                 isFinishedTyping = false
             } else {
+                if userInput == "." {
+                    let isInt = floor(displayValue) == displayValue
+                    if !isInt {
+                        return
+                    }
+                }
                 displayLabel.text = displayLabel.text! + userInput
             }
         }
@@ -32,15 +51,11 @@ class ViewController: UIViewController {
     @IBAction func calcBtnPressed(_ sender: UIButton) {
         isFinishedTyping = true
         
-        guard let number = Double(displayLabel.text!) else {
-            fatalError("Cannot convert display label text to a double.")
-        }
-        
         if let actionBtn = sender.currentTitle {
             if actionBtn == "%" {
-                displayLabel.text = String(number * 0.01)
+                displayValue *= 0.01
             } else if actionBtn == "+/-" {
-                displayLabel.text = String(number * -1)
+                displayValue *= -1
             } else if actionBtn == "AC" {
                 displayLabel.text = "0"
             }
