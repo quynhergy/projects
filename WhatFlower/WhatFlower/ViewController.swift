@@ -11,6 +11,7 @@ import CoreML
 import Vision
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
@@ -29,8 +30,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            imageView.image = userPickedImage
-            
             guard let ciImage = CIImage(image: userPickedImage) else {
                 fatalError("Could not convert image to CIImage")
             }
@@ -72,12 +71,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let parameters : [String:String] = [
             "format" : "json",
             "action" : "query",
-            "prop" : "extracts",
+            "prop" : "extracts|pageimages",
             "exintro" : "",
             "explaintext" : "",
             "titles" : flowerName,
             "indexpageids" : "",
             "redirects" : "1",
+            "pithumbsize" : "500"
         ]
         
         Alamofire.request(wikipediaURL, method: .get, parameters: parameters).responseJSON { (response) in
@@ -85,8 +85,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 print("Success! Got the wikipedia info.")
                 let wikiJSON : JSON = JSON(response.result.value!)
                 let pageid = wikiJSON["query"]["pageids"][0].stringValue
-                let description = wikiJSON["query"]["pages"][pageid]["extract"].stringValue
-                self.label.text = description
+                let flowerDescription = wikiJSON["query"]["pages"][pageid]["extract"].stringValue
+                let flowerImageURL = wikiJSON["query"]["pages"][pageid]["thumbnail"]["source"].stringValue
+                self.imageView.sd_setImage(with: URL(string: flowerImageURL))
+                self.label.text = flowerDescription
             } else {
                 print("Error: \(String(describing: response.result.error))")
             }

@@ -8,5 +8,6 @@ target 'WhatFlower' do
   # Pods for WhatFlower
   pod 'SwiftyJSON'
   pod 'Alamofire'
+  pod 'SDWebImage'
 
 end
