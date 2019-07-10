@@ -19,15 +19,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-c8-Vrx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Aod-c8-Vrx" secondAttribute="height" multiplier="1:1" id="77Q-V2-KEM"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="BlS-ug-x46">
+                                <rect key="frame" x="20" y="529" width="374" height="313"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Aod-c8-Vrx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7t1-4S-D7B"/>
-                            <constraint firstItem="Aod-c8-Vrx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KMZ-FH-gV6"/>
-                            <constraint firstItem="Aod-c8-Vrx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WaZ-6n-inV"/>
-                            <constraint firstItem="Aod-c8-Vrx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dSm-op-kJH"/>
+                            <constraint firstItem="BlS-ug-x46" firstAttribute="top" secondItem="Aod-c8-Vrx" secondAttribute="bottom" constant="27" id="2NM-qy-Lb0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BlS-ug-x46" secondAttribute="trailing" constant="20" id="G96-BO-cxK"/>
+                            <constraint firstItem="Aod-c8-Vrx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W8u-2X-FOE"/>
+                            <constraint firstItem="BlS-ug-x46" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iFw-bM-H7E"/>
+                            <constraint firstItem="Aod-c8-Vrx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jTg-wV-RAU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BlS-ug-x46" secondAttribute="bottom" constant="20" id="v2K-3E-pwe"/>
+                            <constraint firstItem="Aod-c8-Vrx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vcg-uA-lNd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +52,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Aod-c8-Vrx" id="O5e-Qa-J1g"/>
+                        <outlet property="label" destination="BlS-ug-x46" id="tKc-aQ-4fK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
