@@ -27,11 +27,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="BlS-ug-x46">
                                 <rect key="frame" x="20" y="529" width="374" height="313"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BlS-ug-x46" firstAttribute="top" secondItem="Aod-c8-Vrx" secondAttribute="bottom" constant="27" id="2NM-qy-Lb0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BlS-ug-x46" secondAttribute="trailing" constant="20" id="G96-BO-cxK"/>
@@ -45,6 +45,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OVX-g7-JxA">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="WZs-zD-rNK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cameraTapped:" destination="BYZ-38-t0r" id="zEZ-0f-1Qh"/>
                             </connections>
@@ -67,6 +68,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gtL-vm-vPZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
