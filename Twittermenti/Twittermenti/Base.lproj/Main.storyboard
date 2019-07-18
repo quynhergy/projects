@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Twittermenti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-hg-Z13" userLabel="Background">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Ddp-1u-rAV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="788"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAo-mB-lFN" userLabel="Sentiment Label">
+                                                <rect key="frame" x="153" y="0.0" width="108" height="568"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How do people feel about..." textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kF9-ON-0Ia" userLabel="Text Field">
+                                                <rect key="frame" x="0.0" y="628" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="lgY-SQ-ru6"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-Cm-8OS">
+                                                <rect key="frame" x="157.5" y="738" width="99" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="emJ-Pa-Ziz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Predict!"/>
+                                                <connections>
+                                                    <action selector="predictPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lnl-hj-mrS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kF9-ON-0Ia" secondAttribute="trailing" id="Hys-5u-qYa"/>
+                                            <constraint firstItem="kF9-ON-0Ia" firstAttribute="leading" secondItem="Ddp-1u-rAV" secondAttribute="leading" id="SCr-TM-DYl"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45098039215686275" green="0.9882352941176471" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ddp-1u-rAV" secondAttribute="bottom" constant="30" id="3T3-sr-Izc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ddp-1u-rAV" secondAttribute="trailing" id="I03-PQ-lzX"/>
+                                    <constraint firstItem="Ddp-1u-rAV" firstAttribute="leading" secondItem="Bgi-hg-Z13" secondAttribute="leading" id="icu-ux-PGe"/>
+                                    <constraint firstItem="Ddp-1u-rAV" firstAttribute="top" secondItem="Bgi-hg-Z13" secondAttribute="top" id="uzm-wh-duD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bgi-hg-Z13" secondAttribute="trailing" id="bAx-Wj-1f3"/>
+                            <constraint firstItem="Bgi-hg-Z13" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kbP-ao-QIo"/>
+                            <constraint firstItem="Bgi-hg-Z13" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="s2e-Qe-3YF"/>
+                            <constraint firstItem="Bgi-hg-Z13" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wYh-Ux-Ldh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Bgi-hg-Z13" id="UsG-MK-ZwH"/>
+                        <outlet property="sentimentLabel" destination="mAo-mB-lFN" id="PSn-cG-dL7"/>
+                        <outlet property="textField" destination="kF9-ON-0Ia" id="Jks-rp-6Mz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+</document>
