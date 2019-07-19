@@ -12,6 +12,7 @@
 		9393736722DFC36A00ADC0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9393736522DFC36A00ADC0C9 /* Main.storyboard */; };
 		9393736922DFC36B00ADC0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9393736822DFC36B00ADC0C9 /* Assets.xcassets */; };
 		9393736C22DFC36B00ADC0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9393736A22DFC36B00ADC0C9 /* LaunchScreen.storyboard */; };
+		9393737422E11A9800ADC0C9 /* TweetSentimentClassifer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9393737322E11A9800ADC0C9 /* TweetSentimentClassifer.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9393736822DFC36B00ADC0C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9393736B22DFC36B00ADC0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9393736D22DFC36B00ADC0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9393737322E11A9800ADC0C9 /* TweetSentimentClassifer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifer.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				9393736822DFC36B00ADC0C9 /* Assets.xcassets */,
 				9393736A22DFC36B00ADC0C9 /* LaunchScreen.storyboard */,
 				9393736D22DFC36B00ADC0C9 /* Info.plist */,
+				9393737322E11A9800ADC0C9 /* TweetSentimentClassifer.mlmodel */,
 			);
 			path = Twittermenti;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				9393736422DFC36A00ADC0C9 /* ViewController.swift in Sources */,
 				9393736222DFC36A00ADC0C9 /* AppDelegate.swift in Sources */,
+				9393737422E11A9800ADC0C9 /* TweetSentimentClassifer.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
