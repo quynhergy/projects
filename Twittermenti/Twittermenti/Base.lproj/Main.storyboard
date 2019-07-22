@@ -76,7 +76,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="backgroundView" destination="Bgi-hg-Z13" id="UsG-MK-ZwH"/>
                         <outlet property="sentimentLabel" destination="mAo-mB-lFN" id="PSn-cG-dL7"/>
                         <outlet property="textField" destination="kF9-ON-0Ia" id="Jks-rp-6Mz"/>
                     </connections>
